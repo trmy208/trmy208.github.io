@@ -1,24 +1,44 @@
 let events = [
   {
-    title: "Concert Sơn Tùng",
+    title: "Concert Anh Trai Say hi",
     desc: "Live concert cực cháy",
     category: "Nhạc sống",
-    date: "2026-05-01",
-    location: "Hà Nội",
-    price: "500.000đ",
+    date: "2026-04-18",
+    location: "Hồ Chí Minh",
+    price: "1.000.000đ",
     hot: true,
-    img: "https://picsum.photos/400/200?1"
+    img: "anhtraisayhi.jpeg"
   },
   {
-    title: "Workshop AI",
-    desc: "Học AI từ cơ bản",
-    category: "Hội thảo & Workshop",
-    date: "2026-04-20",
-    location: "TP.HCM",
+    title: "Concert Tổ quốc 30/4 - 1/5",
+    desc: "Live concert Tổ quốc",
+    category: "Nhạc sống",
+    date: "2026-04-30",
+    location: "Quảng trường Ba Đình",
+    price: "Miễn phí",
+    hot: true,
+    img: "concerttoquoc.jpg"
+  },
+  {
+    title: "Triển lãm Harry Potter: Trải nghiệm phép thuật",
+    desc: "Triển lãm phép thuật",
+    category: "Tham quan & Trải nghiệm",
+    date: "2026-07-31",
+    location: "Bảo tàng Harry Potter",
     price: "200.000đ",
-    hot: false,
-    img: "https://picsum.photos/400/200?2"
-  }
+    hot: true,
+    img: "harrypotter.jpeg"
+  },
+  {
+    title: "Bảo tàng chiêm tinh học",
+    desc: "Khám phá vũ trụ",
+    category: "Tham quan & Trải nghiệm",
+    date: "2026-06-19",
+    location: "Hòa Lạc, Hà Nội",
+    price: "150.000đ",
+    hot: true,
+    img: "chiemtinh.jpeg"
+  },
 ];
 
 // ===== RENDER =====
@@ -32,7 +52,7 @@ function renderEvents(filter = "all") {
 
   filtered.forEach(e => {
     list.innerHTML += `
-      <div class="card" onclick="goToBooking('${e.title}', '${e.date}', '${e.location}', '${e.price}', '${e.img}')">
+      <div class="card" onclick="goToanhtraisayhi('${e.title}', '${e.date}', '${e.location}', '${e.price}', '${e.img}')">
         <div class="card-img">
           <img src="${e.img}">
           ${e.hot ? `<div class="tag">HOT</div>` : ""}
@@ -162,8 +182,8 @@ function createEvent() {
   closeCreateEvent();
 }
 
-function goToBooking(title, date, location, price, img) {
-  const url = `booking.html?title=${encodeURIComponent(title)}
+function goToanhtraisayhi(title, date, location, price, img) {
+  const url = `anhtraisayhi.html?title=${encodeURIComponent(title)}
   &date=${encodeURIComponent(date)}
   &location=${encodeURIComponent(location)}
   &price=${encodeURIComponent(price)}
