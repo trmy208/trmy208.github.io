@@ -1,0 +1,176 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f8f9fa; 
+}
+        
+.floating {
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.no-scrollbar::-webkit-scrollbar { 
+    display: none; 
+}
+        
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.category-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+}
+
+.category-scroll::-webkit-scrollbar {
+    display: none; 
+}
+     
+.flatpickr-calendar {
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}
+
+.flatpickr-month {
+    height: 45px !important;
+    color: #1f2937 !important; 
+}
+
+.flatpickr-current-month {
+    font-weight: 700 !important;
+    font-size: 110% !important;
+}
+
+span.flatpickr-weekday {
+    color: #9ca3af !important; 
+    font-weight: 600 !important;
+    font-size: 12px !important;
+}
+
+.flatpickr-days {
+    padding: 6px;
+}
+
+.flatpickr-day {
+    margin: 4px !important;
+    border-radius: 12px;
+    line-height: 36px;
+    width: 36px;
+    max-width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flatpickr-day:hover {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.flatpickr-day.selected, 
+.flatpickr-day.startRange{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+} 
+.flatpickr-day.endRange{
+     border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    border-color: transparent;
+    color: white;
+}
+
+.flatpickr-day.inRange {
+    background: #eff6ff !important; 
+    box-shadow: none !important;
+    box-shadow: inset 0 0 0 2px transparent;
+}
+
+.flatpickr-day.today {
+    border-color: #ec4899;
+}
+
+.flatpickr-prev-month, .flatpickr-next-month {
+    padding: 10px !important;
+}
+
+.flatpickr-prev-month:hover svg, .flatpickr-next-month:hover svg {
+    fill: #2563eb !important;
+}
+
+.flatpickr-confirm {
+    display: block !important;
+    width: calc(100% - 16px);
+    margin: 8px auto !important;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    color: white;
+    font-weight: 600;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 100000 !important;
+}
+
+.flatpickr-confirm:hover {
+    opacity: 0.9;
+}
+
+.flatpickr-confirm:disabled {
+    opacity: 0.6;
+    cursor: not-allowed !important;
+}
+
+.flatpickr-calendar *,
+.flatpickr-calendar *::before,
+.flatpickr-calendar *::after {
+    pointer-events: auto;
+}
+
+#dateRangeInput {
+    display: none;
+}
+
+/* ===== FIX BUTTON APPLY FLATPICKR ===== */
+.flatpickr-calendar {
+    overflow: visible !important;
+}
+
+.flatpickr-innerContainer {
+    overflow: visible !important;
+}
+
+.flatpickr-rContainer {
+    overflow: visible !important;
+}
+
+.flatpickr-days {
+    overflow: visible !important;
+}
+
+.flatpickr-confirm {
+    position: relative !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+}
+
+.flatpickr-calendar .flatpickr-confirm {
+    display: block !important;
+}
