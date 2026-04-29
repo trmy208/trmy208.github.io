@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <form class="register-form" id="registerForm">
+            <h2>Create Account</h2>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <div id="strength">Password Strength: </div>
+
+            <label for="profilePic">Profile Picture</label>
+            <input type="file" id="profilePic" accept=".jpg,.jpeg,.png">
+            <div class="image-preview-container">
+                <img id="previewImage" src="" alt="Preview Image">
+            </div>
+
+            <button type="submit">Register</button>
+            <p id="message"></p>
+        </form>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
